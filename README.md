@@ -1,1 +1,2 @@
-# svelte-qlik-web-component
+# svelte-web-comp-vite
+ 

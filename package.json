@@ -1,0 +1,26 @@
+{
+  "name": "nebula-barchart",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/nebula-barchart.js",
+  "module": "./dist/nebula-barchart.es.js",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite --config vite-demo.config.js",
+    "build": "vite build --config vite.config.js",
+    "serve": "vite preview"
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^1.0.0-next.11",
+    "svelte": "^3.38.3",
+    "vite": "^2.3.7"
+  },
+  "dependencies": {
+    "@nebula.js/sn-bar-chart": "^0.8.28",
+    "@nebula.js/stardust": "^1.4.0",
+    "enigma.js": "^2.7.3",
+    "fs": "0.0.1-security",
+    "svelte-tag": "^1.0.1"
+  }
+}
