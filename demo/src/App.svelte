@@ -1,9 +1,9 @@
 <script>
   import { onMount } from "svelte";
   import { QlikComponent } from "./function/qlik";
-  import "../../public/resources/main/main.f6bf74c0.js";
+  import "../../public/resources/main/main.869dd763.js";
 
-  import { render } from "../../../svelte-snowpack-nebula/build/_dist_/index";
+  // import { render } from "../../../svelte-snowpack-nebula/build/_dist_/index";
 
   let nebula;
   let fields = ["Year", "=avg(Weight)"];
@@ -12,10 +12,14 @@
   onMount(async () => {
     let qlikInstance = new QlikComponent();
     nebula = await qlikInstance.chart();
-
-    render(element, { nebula: nebula, fields: fields });
+    console.log(typeof fields);
+    //render(element, { nebula: nebula, fields: fields });
   });
 </script>
+
+<svelte:head>
+  <link rel="stylesheet" href="global.css" />
+</svelte:head>
 
 <main>
   <div id="test">Testsss</div>

@@ -2,7 +2,7 @@
 
 <script>
   import { onMount, tick } from "svelte";
-  import "../global.css";
+  //   import "../global.css";
 
   export let nebula;
   export let fields;
@@ -24,6 +24,7 @@
 </div>
 
 <style>
+  @import "global.css";
   :root {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
       Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;

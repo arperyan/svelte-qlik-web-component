@@ -4,7 +4,20 @@ const { resolve } = require("path");
 
 // https://vitejs.dev/config/
 module.exports = {
-  plugins: [svelte({ compilerOptions: { customElement: true } })],
+  plugins: [
+    svelte({
+      onwarn: (warning, handler) => {
+        const { code, frame } = warning;
+        console.log(code);
+        if (code === "css-unused-selector") return;
+
+        handler(warning);
+      },
+      compilerOptions: {
+        customElement: true,
+      },
+    }),
+  ],
   resolve: {
     browser: true,
     dedupe: ["svelte"],
@@ -23,7 +36,7 @@ module.exports = {
       },
       output: {
         sourcemap: true,
-        format: "es",
+        format: "iife",
         name: "app",
         dir: "public/resources",
       },
