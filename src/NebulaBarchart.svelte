@@ -25,6 +25,7 @@
 
 <style>
   @import "global.css";
+  /* NB - This name needs to be the same as the global css in the main App */
   :root {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
       Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
